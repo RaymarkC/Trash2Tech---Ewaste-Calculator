@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trash2Tech - E-Waste Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Leaflet (for Step 5 map) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4HxDPmUp6v4hG3Ejj6LikUeJ8V+RaH59BIL2KIiA4Q="
+    crossorigin=""
+  />
+  <script
+    defer
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o9N1jQY5T2r8j04YfGLmRoTSesFiNUFDXL9uBeb5GJk="
+    crossorigin=""
+  ></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="sidelogo.png" alt="Trash2Tech Logo" class="sidelogo" />
+      <div class="logo">Trash<span class="bounce-2">2</span>Tech</div>
+    </div>
+    <nav class="navbar-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="importance.html">Why This Is Important?</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-icons">
+      <!-- Floating Images -->
+    <div class="hero-icons">
+  <img class="hero-icon battery" src="trss.png" alt="Battery Icon" />
+  <img class="hero-icon recycle" src="trashhh.jpg" alt="Recycle Icon" />
+  <img class="hero-icon motherboard" src="tra1.jpg" alt="Motherboard Icon" />
+  <img class="hero-icon phone" src="gat.png" alt="Phone Icon" />
+  <img class="hero-icon trash" src="flot.jpg" alt="Trash Icon" />
+</div>
+
+      </svg>
+    </div>
+    <img src="logo.png" alt="Trash2Tech Logo" class="hero-logo" />
+    <div class="hero-text">
+      <h1>
+        Trash<span class="bounce-2">2</span>Tech: A Simple Calculator for E-Waste Management Awareness
+      </h1>
+      <p>
+        Discover safer, smarter ways to dispose of old devices and help build a cleaner future.
+      </p>
+      <a href="#calculator" class="cta-button" id="start-calc-btn">Start Calculating</a>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section id="calculator" class="calculator">
+    <h2>E-Waste Calculator</h2>
+
+    <!-- Progress Bar -->
+    <div class="steps">
+      <div class="step active" data-step="1">STEP 1</div>
+      <div class="step" data-step="2">STEP 2</div>
+      <div class="step" data-step="3">STEP 3</div>
+      <div class="step" data-step="4">STEP 4</div>
+      <div class="step" data-step="5">STEP 5</div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="step-content active" data-step="1">
+      <h3>Step 1: Select Your Small Equipment</h3>
+      <p>Pick all icons that represent your old, broken, or neglected gadgets.</p>
+
+      <div class="item-grid">
+        <div class="item-card">
+          <img src="APPLIANCE.png" alt="Kitchen appliance" />
+          <p>Appliances</p>
+          <div class="quantity-control">
+            <button class="qty-btn minus">-</button>
+            <input type="number" min="0" value="0" />
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="phone.png" alt="Heating and Ventilation" />
+          <p>Phones</p>
+          <div class="quantity-control">
+            <button class="qty-btn minus">-</button>
+            <input type="number" min="0" value="0" />
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="compl.png" alt="Microwave" />
+          <p>Computers/Laptops</p>
+          <div class="quantity-control">
+            <button class="qty-btn minus">-</button>
+            <input type="number" min="0" value="0" />
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="batt.png" alt="Vacuum Cleaner" />
+          <p>Batteries</p>
+          <div class="quantity-control">
+            <button class="qty-btn minus">-</button>
+            <input type="number" min="0" value="0" />
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <img src="others.png" alt="Other" />
+          <p>Others</p>
+          <div class="quantity-control">
+            <button class="qty-btn minus">-</button>
+            <input type="number" min="0" value="0" />
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="navigation-buttons">
+        <button class="nav-btn next-btn">Next Step</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-content" data-step="2">
+      <h3>Step 2: Confirm Device Conditions</h3>
+      <p>Select conditions for your devices.</p>
+       <div class="condition-selection">
+    <h3>Appliances</h3>
+    <label><input type="radio" name="appliances-condition" value="working" checked> Working perfectly</label>
+    <label><input type="radio" name="appliances-condition" value="minor-issues"> Minor issues</label>
+    <label><input type="radio" name="appliances-condition" value="not-working-repairable"> Not working but repairable</label>
+    <label><input type="radio" name="appliances-condition" value="broken"> Broken beyond repair</label>
+  </div>
+
+  <div class="condition-selection">
+    <h3>Phones/laptops/Computers</h3>
+    <label><input type="radio" name="phones-condition" value="working" checked> Working perfectly</label>
+    <label><input type="radio" name="phones-condition" value="minor-issues"> Minor issues</label>
+    <label><input type="radio" name="phones-condition" value="not-working-repairable"> Not working but repairable</label>
+    <label><input type="radio" name="phones-condition" value="broken"> Broken beyond repair</label>
+  </div>
+      <div class="navigation-buttons">
+        <button class="nav-btn prev-btn">Previous Step</button>
+        <button class="nav-btn next-btn">Next Step</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-content" data-step="3">
+      <h3>Step 3: E-Waste Summary</h3>
+      <p>Calculation completed! 🎉 You have discovered the following amount of recoverable materials:</p>
+      <div class="materials">
+        <div class="material">
+          <span class="label">Copper</span>
+          <span class="value" id="copper-value">0g</span>
+        </div>
+        <div class="material">
+          <span class="label">Gold</span>
+          <span class="value" id="gold-value">0g</span>
+        </div>
+        <div class="material">
+          <span class="label">Plastic</span>
+          <span class="value" id="plastic-value">0g</span>
+        </div>
+      </div>
+      <div class="navigation-buttons">
+        <button class="nav-btn prev-btn">Previous Step</button>
+        <button class="nav-btn next-btn">Next Step</button>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-content" data-step="4">
+      <h3>Step 4: Final Thoughts & Awareness</h3>
+      <p>Thank you for using Trash2Tech! Remember:</p>
+      <ul>
+        <li>Toxic chemicals in e-waste pollute soil and water.</li>
+        <li>Recycling conserves rare metals and natural resources.</li>
+        <li>Safe disposal reduces health risks in local communities.</li>
+      </ul>
+      <div class="navigation-buttons">
+        <button class="nav-btn prev-btn">Previous Step</button>
+        <button class="nav-btn next-btn">Next Step</button>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step-content" data-step="5">
+      <h3>Step 5: Locate Disposal Areas</h3>
+      <p>Find nearby e-waste disposal and recycling centers on the map below:</p>
+
+      <div style="width: 100%; height: 400px; margin-bottom:20px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62774.99925461921!2d125.593043!3d7.0653048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f96d8a5c2b9ad5%3A0x7f5cb6a7cbbf2c11!2sSM%20City%20Davao!5e0!3m2!1sen!2sph!4v1694094350000!5m2!1sen!2sph" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <ul id="location-list" style="text-align:left; max-width:700px; margin:20px auto; list-style:disc; padding-left:20px;">
+        <li data-key="sm_ecoland"><strong>SM City Davao (Ecoland)</strong> – Cyberzone, 2F Annex Building</li>
+        <li data-key="sm_lanang"><strong>SM Lanang</strong> – Cyberzone, 3F near Information Booth</li>
+        <li data-key="abreeza"><strong>Abreeza Mall (Globe Store)</strong> – 3rd Level, E-Waste Zero Bin</li>
+      </ul>
+
+      <div class="navigation-buttons">
+        <button class="nav-btn prev-btn">Previous Step</button>
+        <button class="nav-btn restart-btn">Start Over</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 Trash2Tech | WEBDEV by Naj and Ray</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
